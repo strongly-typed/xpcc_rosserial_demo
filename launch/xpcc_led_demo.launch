@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="rosserial_python" type="serial_node.py" name="xpcc_core" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="1000000"/>
+  </node>
+  <node pkg="xpcc_rosserial_demo" type="led_demo.py" name="led_demo" output="screen" />
+</launch>
